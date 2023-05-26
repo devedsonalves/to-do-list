@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./styles.css";
 
 const Header = () => {
@@ -7,9 +9,8 @@ const Header = () => {
         <h2>{"<Logo />"}</h2>
       </div>
       <div className="nav">
-        <button>H</button>
-        <button>C</button>
-        <button>S</button>
+        <Link to="/">TAREFAS</Link>
+        <Link to="/create">CRIAR TAREFA</Link>
       </div>
     </header>
   );
