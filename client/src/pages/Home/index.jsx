@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 
 import "./styles.css";
 
 const Home = ({ tasks }) => {
   return (
     <>
-      <Header></Header>
       <main className="principal">
         {tasks[0] ? (
           <section className="container">
@@ -16,7 +13,6 @@ const Home = ({ tasks }) => {
                 <div>
                   <p>{task.text}</p>
                   <p>({task.category})</p>
-                  <p>[{task.id}]</p>
                 </div>
                 <div>
                   <button>COMPLETAR</button>
@@ -38,7 +34,6 @@ const Home = ({ tasks }) => {
           </div>
         )}
       </main>
-      <Footer></Footer>
     </>
   );
 };

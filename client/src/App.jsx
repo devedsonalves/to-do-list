@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 import Home from "./pages/Home";
 import TaskForm from "./pages/TaskForm";
 
@@ -35,6 +38,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={<Home tasks={tasks} />} />
         <Route
@@ -48,6 +52,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
