@@ -7,10 +7,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-html {
-  min-width: 500px;
-}
-
 body {
   background-color: #ddd;
   min-width: 500px;
@@ -20,7 +16,6 @@ a {
   font-weight: 500;
   text-decoration: 0;
 }
-
 a:hover {
   color: #646cff;
 }
@@ -30,8 +25,12 @@ button {
   color: #fff;
   cursor: pointer;
   border: 0.2rem solid transparent;
+  transition: all 0.25s;
 }
 button:hover {
-  transition: all 0.25s;
+  border: 0.2rem solid #646cff;
+}
+button:focus,
+button:focus-visible {
   border: 0.2rem solid #646cff;
 }

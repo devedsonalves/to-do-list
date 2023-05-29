@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import TaskForm from "./pages/TaskForm";
 
 function App() {
+  const [theme, setTheme] = useState("lightTheme");
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
@@ -37,23 +38,25 @@ function App() {
   }, [tasks]);
 
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home tasks={tasks} />} />
-        <Route
-          path="/create"
-          element={
-            <TaskForm
-              tasks={tasks}
-              setTasks={setTasks}
-              CreateTask={CreateTask}
-            />
-          }
-        />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <section className={theme}>
+      <BrowserRouter>
+        <Header theme={theme} setTheme={setTheme} />
+        <Routes>
+          <Route path="/" element={<Home tasks={tasks} />} />
+          <Route
+            path="/create"
+            element={
+              <TaskForm
+                tasks={tasks}
+                setTasks={setTasks}
+                CreateTask={CreateTask}
+              />
+            }
+          />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </section>
   );
 }
 

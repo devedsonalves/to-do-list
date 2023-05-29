@@ -45,7 +45,7 @@ const TaskForm = ({ CreateTask }) => {
         <div className="btn-container">
           <button type="submit" className="btn-submit">
             <p>CRIAR</p>
-            <i class="ph ph-plus"></i>
+            <i className="ph ph-plus"></i>
           </button>
         </div>
       </form>

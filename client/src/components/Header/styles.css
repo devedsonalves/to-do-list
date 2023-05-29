@@ -18,7 +18,7 @@ h2 {
 
 .nav {
   display: flex;
-  gap: 1.75rem;
+  gap: 1.25rem;
 }
 
 .nav a {
@@ -26,6 +26,36 @@ h2 {
   align-items: center;
   justify-content: center;
 
+  text-align: center;
   font-weight: 600;
   color: #000;
+}
+
+.nav button {
+  width: 8vw;
+  height: 2vh;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  border: 0.2rem solid #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav button i {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.day {
+  background-image: url("../../assets/day.jpg");
+  background-size: cover;
+  color: #000;
+}
+
+.night {
+  background-image: url("../../assets/night.png");
+  background-size: cover;
+  color: #fff;
 }

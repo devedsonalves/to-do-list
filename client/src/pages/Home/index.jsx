@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import "./styles.css";
+import Task from "../../components/Task";
 
 const Home = ({ tasks }) => {
   return (
@@ -9,17 +10,7 @@ const Home = ({ tasks }) => {
         {tasks[0] ? (
           <section className="container">
             {tasks.map((task) => (
-              <div>
-                <div>
-                  <p>{task.text}</p>
-                  <p>({task.category})</p>
-                </div>
-                <div>
-                  <button>COMPLETAR</button>
-                  <button>EDITAR</button>
-                  <button>EXCLUIR</button>
-                </div>
-              </div>
+              <Task title={task.text} category={task.category} />
             ))}
           </section>
         ) : (
@@ -29,7 +20,7 @@ const Home = ({ tasks }) => {
             </div>
             <Link to="/create" className="btn">
               <p>CRIAR TAREFA</p>
-              <i class="ph ph-arrow-up-right"></i>
+              <i className="ph ph-arrow-up-right"></i>
             </Link>
           </div>
         )}
